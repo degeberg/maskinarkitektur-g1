@@ -1,0 +1,2 @@
+multiplexerens valg af rA og rB er omvendt, men den bliver not'et i controlleren
+skal vi have både med/uden fortegn? (de skriver addu, men slt)
