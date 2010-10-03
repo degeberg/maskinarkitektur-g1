@@ -6,7 +6,7 @@ derefter sættes sammen:
 \item 1-bit ALU
 \item 1-bit ALU til den sidste bit, som opdager overflow samt finder ud af om
 resultatet er negativt.
-\begin{itemize}
+\end{itemize}
 
 \subsection{1-bit adder}
 Vores 1-bit adder var triviel at implementere. Den tager imod tre 1-bit input, lægger
@@ -15,7 +15,7 @@ den ene af vores input som den indgående mente, ligesom den mest betydende bit 
 også forstås som den udgående mente. Dette er dog ikke relevant for
 implementation. \\
 \\
-Indsæt screenshot.
+\includegraphics{Billeder/1bit-adder.png}
 
 \subsection{1-bit ALU}
 Vores 1-bit ALU tager imod fem forskellige typer input:
@@ -23,7 +23,7 @@ Vores 1-bit ALU tager imod fem forskellige typer input:
 \item De to tal, som der laver operationer kaldet {\tt a} og {\tt b}.
 \item Information om hvorvidt {\tt a} og {\tt b} skal negeres før de bruges.
 \item Den indgående mente.
-\item Information om værdien resultatet af en ``mindre end''-operation som ikke
+\item Information om resultatet af en ``mindre end''-operation som ikke
 kan udregnes ud fra en enkelt bit.
 \item En 2-bits beskrivelse af hvilken operation der skal udføres på {\tt a} og
 {\tt b}.
@@ -35,7 +35,7 @@ kredsløb til beregning af alle resultaterne og hvilket resultat der bruges
 udvælges af en MUX. Desuden er der et output til den udgående mente som bruges
 til den næste 1-bit ALU. \\
 \\
-Indsæt screenshot.
+\includegraphics[angle=90]{Billeder/1bit-ALU.png}
 
 \subsection{1-bit ALU til den sidste bit}
 Den sidste 1-bit ALU er som udgangspunkt konstrueret på præcis som den
@@ -45,9 +45,9 @@ ved $CarryIn XOR CarryOut$.
 
 Resultatet er desuden negativt netop når det der ikke er overflow og udregnede
 resultat er negative (den sidste bit er 1) eller når der {\emph er} overflow og
-der udregnedes resultat er positivt. Medandre ord $Overflow XOR Result$. \\
+der udregnedes resultat er positivt. Med andre ord $Overflow XOR Result$. \\
 \\
-Indsæt screenshot.
+\includegraphics[angle=90]{Billeder/1bit-ALU-last.png}
 
 \subsection{4-bit ALU}
 Ud fra 1-bit ALU'erne er det trivielt at implementere en 4-bit ALU -- bare sæt
@@ -57,4 +57,4 @@ operation der er tale om. I tilfælde af at {\tt b} negeres sættes den første
 mente også til 1, idet dette er en nem måde at implementere {\tt
 sub}-operationen på. \\
 \\
-Indsæt screenshot.
+\includegraphics{Billeder/4bit-ALU.png}
